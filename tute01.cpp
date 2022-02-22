@@ -18,7 +18,7 @@ printf("Hello World") --> std::cout << "Hello World";
 */
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main() 
 {
     float cm, inches;
@@ -26,5 +26,17 @@ int main()
     scanf("%f",&cm);
     inches = cm / 2.54;
     printf("Length in inches is %f \n", inches);
+    return 0;
+}*/  
+#include <iostream>
+#include<iomanip>
+using namespace std;
+int main() 
+{
+    float cm, inches;
+    cout<<"Enter a length in cm : ";
+    cin>>cm;
+    inches = cm / 2.54;
+    cout<< setiosflags(ios::fixed)<< setprecision(2)<<"Length in inches is: "<<endl<<inches << endl;
     return 0;
 }  
